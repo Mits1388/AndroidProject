@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyFirstProject</string>
+    <string name="text">TextView</string>
+    <string name="right">Right</string>
+    <string name="left">Left</string>
+    <string name="swap">SWAP</string>
+</resources>
