@@ -12,7 +12,7 @@ import android.widget.TextView;
  * Created by mizz8 on 07.02.2018.
  */
 
-public class FirstProject extends AppCompatActivity implements View.OnClickListener {
+public class HomeWork1Activity extends AppCompatActivity implements View.OnClickListener {
 
     private TextView text1;
     private TextView text2;
@@ -21,7 +21,7 @@ public class FirstProject extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.activity_homework1);
         text1 = findViewById(R.id.textView1);
         text2 = findViewById(R.id.textView2);
         but = findViewById(R.id.button);
@@ -47,9 +47,11 @@ public class FirstProject extends AppCompatActivity implements View.OnClickListe
     }
 
     public void exchange(){
+
         String first = String.valueOf(text1.getText());
         String second = String.valueOf(text2.getText());
         text1.setText(second);
         text2.setText(first);
+
     }
 }
