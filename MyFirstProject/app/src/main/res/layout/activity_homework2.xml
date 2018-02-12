@@ -31,6 +31,20 @@
                 />
         </LinearLayout>
 
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="@string/austria"
+                android:textColor="#ffffff"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:background="#868484"
+                />
+        </FrameLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -49,6 +63,20 @@
                 />
         </LinearLayout>
 
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="@string/poland"
+                android:textColor="#ffffff"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:background="#868484"
+                />
+        </FrameLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -60,7 +88,6 @@
                 android:layout_weight="1"
                 android:background="#14df06"
                 />
-
 
             <View
                 android:layout_width="match_parent"
@@ -76,6 +103,20 @@
                 android:background="#f20606"
                 />
         </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="@string/italy"
+                android:textColor="#ffffff"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:background="#868484"
+                />
+        </FrameLayout>
 
 
         <LinearLayout
@@ -103,6 +144,19 @@
                 />
         </LinearLayout>
 
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="@string/colombia"
+                android:textColor="#ffffff"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:background="#868484"
+                />
+        </FrameLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -130,6 +184,19 @@
             </LinearLayout>
         </LinearLayout>
 
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="@string/madagascar"
+                android:textColor="#ffffff"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:background="#868484"
+                />
+        </FrameLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -165,9 +232,19 @@
                 />
         </LinearLayout>
 
-
-
-
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="@string/thailand"
+                android:textColor="#ffffff"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:background="#868484"
+                />
+        </FrameLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -235,6 +312,21 @@
             </LinearLayout>
 
         </LinearLayout>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="@string/denmark"
+                android:textColor="#ffffff"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:background="#868484"
+                />
+        </FrameLayout>
 
     </LinearLayout>
 </ScrollView>

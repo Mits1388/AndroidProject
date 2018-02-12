@@ -24,12 +24,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="click"
             android:background="#0874e7"
             android:textColor="#ffff"
             android:height="25dp"
             android:gravity="center"
             android:text="@string/left" />
+        <!-- android:onClick="click"-->
 
         <TextView
             android:id="@+id/textView2"

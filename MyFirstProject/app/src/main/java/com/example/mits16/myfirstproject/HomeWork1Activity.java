@@ -18,6 +18,14 @@ public class HomeWork1Activity extends AppCompatActivity implements View.OnClick
     private TextView text2;
     private Button but;
 
+    public View.OnClickListener listener = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            exchange();
+        }
+    };
+
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,20 +34,23 @@ public class HomeWork1Activity extends AppCompatActivity implements View.OnClick
         text2 = findViewById(R.id.textView2);
         but = findViewById(R.id.button);
 
+
+
+
         but.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 exchange();
             }
         });
-
+        text1.setOnClickListener(listener);
         text2.setOnClickListener(this);
     }
 
 
-    public void click (View view){
+   /* public void click (View view){
         exchange();
-    }
+    }*/
 
     @Override
     public void onClick(View view) {
