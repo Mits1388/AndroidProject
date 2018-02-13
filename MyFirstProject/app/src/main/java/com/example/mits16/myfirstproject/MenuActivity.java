@@ -15,6 +15,7 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
 
     private Button button;
     private Button button1;
+    private Button button2;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -22,8 +23,10 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_menu);
         button = findViewById(R.id.button);
         button1 = findViewById(R.id.button1);
+        button2 = findViewById(R.id.button2);
         button.setOnClickListener(this);
         button1.setOnClickListener(this);
+        button2.setOnClickListener(this);
 
       /*  button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +53,9 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(intent);
         }else if((view.getId() == R.id.button1)){
             Intent intent = new Intent(MenuActivity.this, HomeWork2Activity.class);
+            startActivity(intent);
+        }else if ((view.getId() == R.id.button2)){
+            Intent intent = new Intent(MenuActivity.this, HomeWork3Activity.class);
             startActivity(intent);
         }
     }

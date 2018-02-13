@@ -16,7 +16,7 @@ public class HomeWork1Activity extends AppCompatActivity implements View.OnClick
 
     private TextView text1;
     private TextView text2;
-    private Button but;
+    private Button button;
 
     public View.OnClickListener listener = new View.OnClickListener() {
         @Override
@@ -32,12 +32,12 @@ public class HomeWork1Activity extends AppCompatActivity implements View.OnClick
         setContentView(R.layout.activity_homework1);
         text1 = findViewById(R.id.textView1);
         text2 = findViewById(R.id.textView2);
-        but = findViewById(R.id.button);
+        button = findViewById(R.id.button);
 
 
 
 
-        but.setOnClickListener(new View.OnClickListener() {
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 exchange();

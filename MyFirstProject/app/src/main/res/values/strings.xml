@@ -11,4 +11,9 @@
     <string name="madagascar">Madagascar</string>
     <string name="thailand">Thailand</string>
     <string name="denmark">Denmark</string>
+    <string name="homework1">homeWork1</string>
+    <string name="homework2">homeWork2</string>
+    <string name="homework3">homeWork3</string>
+    <string name="picture">Picture</string>
+    <string name="link">http://www.youloveit.ru/uploads/gallery/main/162/pikachu.png</string>
 </resources>
