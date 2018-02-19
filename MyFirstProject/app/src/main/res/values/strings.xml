@@ -16,4 +16,8 @@
     <string name="homework3">homeWork3</string>
     <string name="picture">Picture</string>
     <string name="link">http://www.youloveit.ru/uploads/gallery/main/162/pikachu.png</string>
+    <string name="homework4">HomeWork4</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="clock">Clock</string>
 </resources>

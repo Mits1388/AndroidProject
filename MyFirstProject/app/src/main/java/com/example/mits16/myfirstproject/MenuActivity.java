@@ -1,11 +1,14 @@
 package com.example.mits16.myfirstproject;
 
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+
+import com.example.mits16.myfirstproject.homework4.HomeWork4Activity;
 
 /**
  * Created by mizz8 on 10.02.2018.
@@ -16,6 +19,7 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
     private Button button;
     private Button button1;
     private Button button2;
+    private Button button3;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -24,11 +28,13 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
         button = findViewById(R.id.button);
         button1 = findViewById(R.id.button1);
         button2 = findViewById(R.id.button2);
+        button3 = findViewById(R.id.button3);
         button.setOnClickListener(this);
         button1.setOnClickListener(this);
         button2.setOnClickListener(this);
+        button3.setOnClickListener(this);
 
-      /*  button.setOnClickListener(new View.OnClickListener() {
+        /*  button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                     Intent intent = new Intent(MenuActivity.this, HomeWork1Activity.class);
@@ -57,6 +63,10 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
         }else if ((view.getId() == R.id.button2)){
             Intent intent = new Intent(MenuActivity.this, HomeWork3Activity.class);
             startActivity(intent);
+        }else if ((view.getId() == R.id.button3)){
+            Intent intent = new Intent(MenuActivity.this,HomeWork4Activity.class);
+            startActivity(intent);
+            overridePendingTransition(R.anim.translate,R.anim.alpha);
         }
     }
 }

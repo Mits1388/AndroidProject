@@ -22,6 +22,10 @@
         <activity android:name=".HomeWork2Activity"
             android:parentActivityName=".MenuActivity"/>
         <activity android:name=".HomeWork3Activity"
+    android:parentActivityName=".MenuActivity"/>
+        <activity android:name=".homework4.HomeWork4Activity"
             android:parentActivityName=".MenuActivity"/>
-        </application>
+        <activity android:name=".homework4.ClockActivity"
+            android:parentActivityName=".homework4.HomeWork4Activity"/>
+    </application>
 </manifest>
