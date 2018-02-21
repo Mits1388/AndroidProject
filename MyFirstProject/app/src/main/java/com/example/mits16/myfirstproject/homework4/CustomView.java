@@ -37,6 +37,20 @@ public class CustomView  extends View{
     private float stopYMinutes;
     private Paint painLine;
     private Paint painLineHour;
+    private String text = "12";
+    private String text2 = "3";
+    private String text3 = "6";
+    private String text4 = "9";
+    private Paint painText;
+    private float startXText;
+    private float startYText;
+    private float startXText2;
+    private float startYText2;
+    private float startXText3;
+    private float startYText3;
+    private float startXText4;
+    private float startYText4;
+
 
 
 
@@ -74,7 +88,13 @@ public class CustomView  extends View{
         painLineHour = new Paint();
         painLineHour.setColor(Color.BLACK);
         painLineHour.setStrokeWidth(40.0f);
-        Calendar calendar = new C
+
+
+        painText = new Paint();
+        painText.setColor(Color.BLACK);
+        painText.setTextSize(80);
+        painText.setStrokeWidth(40.0f);
+
 
     }
 
@@ -107,6 +127,20 @@ public class CustomView  extends View{
         stopYMinutes = h/3.8f;
 
 
+        startXText = w/2.3f;
+        startYText = h/4.1f;
+
+        startXText2 = w/2f;
+        startYText2 = h/3.6f;
+
+        startXText3 = w/2.2f;
+        startYText3 = h/3.5f;
+
+        startXText4 = w/2.3f;
+        startYText4 = h/3.6f;
+
+
+
     }
 
     @Override
@@ -115,31 +149,51 @@ public class CustomView  extends View{
         canvas.drawCircle(cx,cy,radius,pain);
         canvas.drawLine(startXHour,startYHour,stopXHour,stopYHour,painLineHour);
         canvas.drawLine(startXMinutes,startYMinutes,stopXMinutes,stopYMinutes,painLine);
-        canvas.drawLine(startX,startY,stopX,stopY,painLine);
+
+        canvas.drawText(text,startXText,startYText,painText);
+
         canvas.rotate(30,cx,cy);
         canvas.drawLine(startX,startY,stopX,stopY,painLine);
         canvas.rotate(30,cx,cy);
         canvas.drawLine(startX,startY,stopX,stopY,painLine);
         canvas.rotate(30,cx,cy);
-        canvas.drawLine(startX,startY,stopX,stopY,painLine);
+
+        canvas.save();
+        canvas.rotate(-90, startX, stopY);
+        canvas.drawText(text2, startXText2,startYText2, painText);
+        canvas.restore();
+
+
         canvas.rotate(30,cx,cy);
         canvas.drawLine(startX,startY,stopX,stopY,painLine);
         canvas.rotate(30,cx,cy);
         canvas.drawLine(startX,startY,stopX,stopY,painLine);
         canvas.rotate(30,cx,cy);
-        canvas.drawLine(startX,startY,stopX,stopY,painLine);
+
+
+        canvas.save();
+        canvas.rotate(-180, startX, stopY);
+        canvas.drawText(text3, startXText3,startYText3, painText);
+        canvas.restore();
+
         canvas.rotate(30,cx,cy);
         canvas.drawLine(startX,startY,stopX,stopY,painLine);
         canvas.rotate(30,cx,cy);
         canvas.drawLine(startX,startY,stopX,stopY,painLine);
         canvas.rotate(30,cx,cy);
-        canvas.drawLine(startX,startY,stopX,stopY,painLine);
+
+
+        canvas.save();
+        canvas.rotate(90, startX, stopY);
+        canvas.drawText(text4, startXText4,startYText4, painText);
+        canvas.restore();
+
         canvas.rotate(30,cx,cy);
         canvas.drawLine(startX,startY,stopX,stopY,painLine);
         canvas.rotate(30,cx,cy);
         canvas.drawLine(startX,startY,stopX,stopY,painLine);
         canvas.rotate(30,cx,cy);
-        canvas.drawLine(startX,startY,stopX,stopY,painLine);
+      
 
     }
 }
