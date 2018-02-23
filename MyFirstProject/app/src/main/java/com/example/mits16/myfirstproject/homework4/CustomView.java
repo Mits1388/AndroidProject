@@ -142,7 +142,7 @@ public class CustomView  extends View{
             init();
         }
         drawCircle(canvas);
-        drawCenter(canvas);
+        //drawCenter(canvas);
         drawDial(canvas);
         drawHands(canvas);
         postInvalidateDelayed(500);
@@ -211,10 +211,7 @@ public class CustomView  extends View{
     }
 
 
-    private void drawCenter(Canvas canvas) {
+   /* private void drawCenter(Canvas canvas) {
         canvas.drawCircle(width/2,height/2, 15, paint);
-        /* Bitmap myBitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.sova_anmation_1);
-            canvas.drawBitmap(myBitmap, width / 2, height / 2, paint);*/
-
-    }
+    }*/
 }

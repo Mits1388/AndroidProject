@@ -27,5 +27,7 @@
             android:parentActivityName=".MenuActivity"/>
         <activity android:name=".homework4.ClockActivity"
             android:parentActivityName=".homework4.HomeWork4Activity"/>
+        <activity android:name=".homework5.HomeWork5Activity"
+            android:parentActivityName=".MenuActivity"/>
     </application>
 </manifest>
