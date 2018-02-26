@@ -21,4 +21,7 @@
     <string name="stop">Stop</string>
     <string name="clock">Clock</string>
     <string name="homework5">HomeWork5</string>
+    <string name="wi_fi_on">Wi-Fi ON</string>
+    <string name="wi_fi_off">Wi-Fi OFF</string>
+    <string name="homework6">HomeWork6</string>
 </resources>
