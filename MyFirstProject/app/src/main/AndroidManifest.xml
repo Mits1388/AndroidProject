@@ -35,23 +35,20 @@
 
         <activity android:name=".HomeWork1Activity"
             android:parentActivityName=".MenuActivity"/>
-
         <activity android:name=".HomeWork2Activity"
             android:parentActivityName=".MenuActivity"/>
-
         <activity android:name=".HomeWork3Activity"
     android:parentActivityName=".MenuActivity"/>
-
         <activity android:name=".homework4.HomeWork4Activity"
             android:parentActivityName=".MenuActivity"/>
-
         <activity android:name=".homework4.ClockActivity"
             android:parentActivityName=".homework4.HomeWork4Activity"/>
-
         <activity android:name=".homework5.HomeWork5Activity"
             android:parentActivityName=".MenuActivity"/>
-
         <activity android:name=".homework6.HomeWork6Activity"
+            android:parentActivityName=".MenuActivity"/>
+
+        <activity android:name=".homework7.HomeWork7Activity"
             android:parentActivityName=".MenuActivity"/>
 
     </application>

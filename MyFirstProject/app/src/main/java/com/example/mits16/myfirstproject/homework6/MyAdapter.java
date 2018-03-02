@@ -2,7 +2,6 @@ package com.example.mits16.myfirstproject.homework6;
 
 
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,19 +10,21 @@ import com.example.mits16.myfirstproject.R;
 import java.util.ArrayList;
 
 
+
 /**
  * Created by mizz8 on 25.02.2018.
  */
 
 public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
 
-    private ArrayList<String> itemList = new ArrayList<>();
+   private ArrayList<People> itemList = new ArrayList<>();
 
 
-    public void setItems (ArrayList<String> arrayList){
+    public void setItems (ArrayList<People> arrayList){
         this.itemList.clear();
         this.itemList.addAll(arrayList);
         notifyDataSetChanged();
+
     }
 
     @Override
@@ -35,12 +36,13 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         Holder myHolder = (Holder)holder;
+        final People people = itemList.get(position);
 
-        //myHolder.nameTextView.setText(itemList.get(position).getName());
-       // myHolder.surnameTextView.setText((CharSequence) itemList.get(position).getSurname());
-
-       myHolder.nameTextView.setText(itemList.toString());
-
+        myHolder.idTextView.setText("Id: "+people.getId());
+        myHolder.nameTextView.setText(people.getName());
+        myHolder.surnameTextView.setText(people.getSurname());
+        myHolder.ageTextView.setText("Age: "+people.getAge());
+        myHolder.isDegreeTextView.setText("Degree: "+people.getIsDegree());
     }
 
     @Override
@@ -49,17 +51,27 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
     }
 
     static class Holder extends RecyclerView.ViewHolder{
-      //  ImageView imageView;
+
         TextView nameTextView;
         TextView  surnameTextView;
+        TextView idTextView;
+        TextView ageTextView;
+        TextView isDegreeTextView;
+
 
         public Holder(View itemView) {
             super(itemView);
-            Log.e("UserAdapter","Holder");
-          //  imageView = itemView.findViewById(R.id.imageView);
-            nameTextView =(TextView) itemView.findViewById(R.id.nameTextView);
-            surnameTextView = (TextView) itemView.findViewById(R.id.surnameTextView);
+
+            idTextView = itemView.findViewById(R.id.idTextView);
+            ageTextView = itemView.findViewById(R.id.ageTextView);
+            isDegreeTextView = itemView.findViewById(R.id.isDegreeTextView);
+            nameTextView = itemView.findViewById(R.id.nameTextView);
+            surnameTextView = itemView.findViewById(R.id.surnameTextView);
         }
     }
 
+    public void filterList(ArrayList<People> filter) {
+        this.itemList = filter;
+        notifyDataSetChanged();
+    }
 }

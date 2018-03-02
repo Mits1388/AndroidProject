@@ -11,12 +11,13 @@ import android.widget.Button;
 import com.example.mits16.myfirstproject.homework4.HomeWork4Activity;
 import com.example.mits16.myfirstproject.homework5.HomeWork5Activity;
 import com.example.mits16.myfirstproject.homework6.HomeWork6Activity;
+import com.example.mits16.myfirstproject.homework7.HomeWork7Activity;
 
 /**
  * Created by mizz8 on 10.02.2018.
  */
 
-public class MenuActivity extends AppCompatActivity implements View.OnClickListener  {
+public class MenuActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button button;
     private Button button1;
@@ -24,6 +25,7 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
     private Button button3;
     private Button button4;
     private Button button5;
+    private Button button6;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -35,12 +37,15 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
         button3 = findViewById(R.id.button3);
         button4 = findViewById(R.id.button7);
         button5 = findViewById(R.id.button8);
+        button6 = findViewById(R.id.button9);
         button.setOnClickListener(this);
         button1.setOnClickListener(this);
         button2.setOnClickListener(this);
         button3.setOnClickListener(this);
         button4.setOnClickListener(this);
         button5.setOnClickListener(this);
+        button6.setOnClickListener(this);
+
 
         /*  button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,24 +67,28 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
 
-        if(view.getId() == R.id.button ){
+        if (view.getId() == R.id.button) {
             Intent intent = new Intent(MenuActivity.this, HomeWork1Activity.class);
             startActivity(intent);
-        }else if((view.getId() == R.id.button1)){
+        } else if ((view.getId() == R.id.button1)) {
             Intent intent = new Intent(MenuActivity.this, HomeWork2Activity.class);
             startActivity(intent);
-        }else if ((view.getId() == R.id.button2)){
+        } else if ((view.getId() == R.id.button2)) {
             Intent intent = new Intent(MenuActivity.this, HomeWork3Activity.class);
             startActivity(intent);
-        }else if ((view.getId() == R.id.button3)){
-            Intent intent = new Intent(MenuActivity.this,HomeWork4Activity.class);
+        } else if ((view.getId() == R.id.button3)) {
+            Intent intent = new Intent(MenuActivity.this, HomeWork4Activity.class);
             startActivity(intent);
-            overridePendingTransition(R.anim.translate,R.anim.alpha);
-        }else if ((view.getId() == R.id.button7)){
-            Intent intent = new Intent(MenuActivity.this,HomeWork5Activity.class);
+            overridePendingTransition(R.anim.translate, R.anim.alpha);
+        } else if ((view.getId() == R.id.button7)) {
+            Intent intent = new Intent(MenuActivity.this, HomeWork5Activity.class);
             startActivity(intent);
-        }else if((view.getId() == R.id.button8)){
+        } else if ((view.getId() == R.id.button8)) {
             Intent intent = new Intent(MenuActivity.this, HomeWork6Activity.class);
-            startActivity(intent);}
+            startActivity(intent);
+        } else if ((view.getId() == R.id.button9)) {
+            Intent intent = new Intent(MenuActivity.this, HomeWork7Activity.class);
+            startActivity(intent);
+        }
     }
 }

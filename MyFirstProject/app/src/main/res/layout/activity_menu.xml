@@ -51,6 +51,12 @@
         android:background="#0bf40b"
         android:layout_margin="10dp"
         android:text="@string/homework6" />
-
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0bf40b"
+        android:layout_margin="10dp"
+        android:text="@string/homework7" />
 
 </LinearLayout>

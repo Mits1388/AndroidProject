@@ -12,6 +12,7 @@ import android.os.IBinder;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
@@ -31,9 +32,12 @@ public class HomeWork5Activity extends AppCompatActivity {
     private Button stop;
     private WifiManager wifiManager;
     private BroadcastReceiver broadcastReceiver;
-    boolean bound = false;
-    ServiceConnection sConn;
-    Intent intent;
+    private boolean bound = false;
+    private ServiceConnection serviceConnection;
+    private Intent intent;
+    private Toast toast;
+    MyService myService;
+
 
 
     @Override
@@ -49,17 +53,22 @@ public class HomeWork5Activity extends AppCompatActivity {
         intentFilter.addAction(String.valueOf(WifiManager.WIFI_STATE_ENABLED));
 
 
-        sConn = new ServiceConnection() {
+        serviceConnection = new ServiceConnection() {
             public void onServiceConnected(ComponentName name, IBinder binder) {
-                Log.d("AAAAA", "MainActivity onServiceConnected");
+
+                MyService.LocalBinder myBinder = (MyService.LocalBinder) binder;
+                myService = (myBinder).getService();
+                Log.e("Service", "On Service Connected");
                 bound = true;
             }
 
             public void onServiceDisconnected(ComponentName name) {
-                Log.d("AAAA", "MainActivity onServiceDisconnected");
+                myService = null;
+                Log.e("Service", "On Service Disconnected");
                 bound = false;
             }
         };
+
 
         broadcastReceiver = new BroadcastReceiver() {
             @Override
@@ -70,12 +79,16 @@ public class HomeWork5Activity extends AppCompatActivity {
                     if (intent.getBooleanExtra(WifiManager.EXTRA_SUPPLICANT_CONNECTED, false))
                     {
                         changeWiFi(R.drawable.ic_signal_wifi_4_bar_black_24dp);
-                        Toast.makeText(getApplicationContext(),"wifi enabled",Toast.LENGTH_SHORT).show();
+                        toast = Toast.makeText(getApplicationContext(),"wifi enabled",Toast.LENGTH_SHORT);
+                        toast.setGravity(Gravity.CENTER, 0, 0);
+                        toast.show();
                     }
                     else
                     {
                         changeWiFi(R.drawable.ic_signal_wifi_0_bar_black_24dp);
-                        Toast.makeText(getApplicationContext(),"wifi disabled",Toast.LENGTH_SHORT).show();
+                        toast = Toast.makeText(getApplicationContext(),"wifi disabled",Toast.LENGTH_SHORT);
+                        toast.setGravity(Gravity.CENTER, 0, 0);
+                        toast.show();
                     }
                 }
             }
@@ -99,6 +112,14 @@ public class HomeWork5Activity extends AppCompatActivity {
     }
 
 
+    public void onButtonClick(View v) {
+        if (bound) {
+            int num = myService.getRandomNumber();
+            Toast.makeText(this, "number: " + num, Toast.LENGTH_SHORT).show();
+
+        }
+    }
+
     public void enableWifi() {
         if (!wifiManager.isWifiEnabled()) {
             changeWiFi(R.drawable.ic_signal_wifi_0_bar_black_24dp);
@@ -106,8 +127,6 @@ public class HomeWork5Activity extends AppCompatActivity {
             changeWiFi(R.drawable.ic_signal_wifi_4_bar_black_24dp);
         }
     }
-
-
 
     public void changeWiFi(int image){
         imageView = (ImageView)findViewById(R.id.wifi);
@@ -128,17 +147,15 @@ public class HomeWork5Activity extends AppCompatActivity {
         enableWifi();
         Intent intent = new Intent(this,MyService.class);
         startService(intent);
-        bindService(intent, sConn, BIND_AUTO_CREATE);
+        bindService(intent, serviceConnection, BIND_AUTO_CREATE);
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-
-      //  unregisterReceiver(broadcastReceiver);
        stopService(new Intent(this,MyService.class));
-        if (!bound) return;
-        unbindService(sConn);
+        if (!bound) {return;}
+        unbindService(serviceConnection);
         bound = false;
     }
 

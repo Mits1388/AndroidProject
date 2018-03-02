@@ -27,4 +27,14 @@
             android:text="@string/wi_fi_off"
             />
     </LinearLayout>
+    <Button
+        android:id="@+id/service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#ff4400"
+        android:textColor="#ffffff"
+        android:onClick="onButtonClick"
+        android:text="Service"
+        />
 </LinearLayout>
