@@ -12,6 +12,8 @@ import com.example.mits16.myfirstproject.homework4.HomeWork4Activity;
 import com.example.mits16.myfirstproject.homework5.HomeWork5Activity;
 import com.example.mits16.myfirstproject.homework6.HomeWork6Activity;
 import com.example.mits16.myfirstproject.homework7.HomeWork7Activity;
+import com.example.mits16.myfirstproject.homework8.HomeWork8Activity;
+import com.example.mits16.myfirstproject.homework9.HomeWork9Activity;
 
 /**
  * Created by mizz8 on 10.02.2018.
@@ -26,7 +28,8 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
     private Button button4;
     private Button button5;
     private Button button6;
-
+    private Button button7;
+    private Button button8;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +41,8 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
         button4 = findViewById(R.id.button7);
         button5 = findViewById(R.id.button8);
         button6 = findViewById(R.id.button9);
+        button7 = findViewById(R.id.button10);
+        button8 = findViewById(R.id.button11);
         button.setOnClickListener(this);
         button1.setOnClickListener(this);
         button2.setOnClickListener(this);
@@ -45,6 +50,8 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
         button4.setOnClickListener(this);
         button5.setOnClickListener(this);
         button6.setOnClickListener(this);
+        button7.setOnClickListener(this);
+        button8.setOnClickListener(this);
 
 
         /*  button.setOnClickListener(new View.OnClickListener() {
@@ -88,6 +95,12 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(intent);
         } else if ((view.getId() == R.id.button9)) {
             Intent intent = new Intent(MenuActivity.this, HomeWork7Activity.class);
+            startActivity(intent);
+        }else if ((view.getId() == R.id.button10)) {
+            Intent intent = new Intent(MenuActivity.this, HomeWork8Activity.class);
+            startActivity(intent);
+        }else if ((view.getId() == R.id.button11)) {
+            Intent intent = new Intent(MenuActivity.this, HomeWork9Activity.class);
             startActivity(intent);
         }
     }

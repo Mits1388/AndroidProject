@@ -47,11 +47,14 @@
             android:parentActivityName=".MenuActivity"/>
         <activity android:name=".homework6.HomeWork6Activity"
             android:parentActivityName=".MenuActivity"/>
-
         <activity android:name=".homework7.HomeWork7Activity"
             android:parentActivityName=".MenuActivity"/>
+        <activity android:name=".homework8.HomeWork8Activity"
+            android:parentActivityName=".MenuActivity"/>
+
+        <activity android:name=".homework9.HomeWork9Activity"
+            android:parentActivityName=".MenuActivity"/>
+
 
     </application>
-
-
 </manifest>
