@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="android.view.View"/>
+        <variable name="user" type="com.example.mits16.presentation.homework9.User"/>
+    </data>
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/liner_layout_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+            <Button
+            android:id="@+id/buttonWoman"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+                android:onClick="onWomanClick"
+            android:text="Woman"/>
+            <Button
+                android:id="@+id/buttonMan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onManClick"
+                android:text="Man"/>
+        </LinearLayout>
+
+<LinearLayout
+    android:id="@+id/layout"
+    android:layout_width="wrap_content"
+    android:layout_below="@+id/liner_layout_home"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp">
+    <ImageView
+        android:id="@+id/imageBinding"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        app:src = "@{user.imageUrl}"/>
+</LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout">
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:textSize="30sp"
+                android:text="Name "/>
+            <TextView
+                android:id="@+id/name1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textSize="30sp"
+                android:textColor="@{user.genderType() == true ? @color/blue : @color/pink}"
+                android:text="@{user.name}"/>
+        </LinearLayout>
+
+   <LinearLayout
+       android:id="@+id/layoutSurname"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/layoutName">
+       <TextView
+           android:id="@+id/surname"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="30dp"
+           android:textSize="30sp"
+           android:text="Surname "/>
+       <TextView
+           android:id="@+id/surname1"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="10dp"
+           android:textSize="30sp"
+           android:textColor="@{user.genderType() == true ? @color/blue : @color/pink}"
+           android:text="@{user.surname}"/>
+   </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layoutAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutSurname">
+        <TextView
+            android:id="@+id/age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:textSize="30sp"
+            android:text="Age "/>
+        <TextView
+            android:id="@+id/age1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="30sp"
+            android:textColor="@{user.genderType() == true ? @color/blue : @color/pink}"
+            android:text="@{String.valueOf(user.age)}"/>
+    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layoutGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layoutAge">
+            <TextView
+                android:id="@+id/gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:textSize="30sp"
+                android:text="Gender "/>
+            <TextView
+                android:id="@+id/gender1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textSize="30sp"
+                android:text="@{user.gender}"
+                android:textColor="@{user.genderType() == true ? @color/blue : @color/pink}"
+               />
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

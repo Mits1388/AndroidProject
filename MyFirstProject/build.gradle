@@ -8,11 +8,39 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.0.1'
-        
+        //classpath 'com.android.databinding:compiler:3.0.0'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
+}
+
+ext{
+    compileSdkVersion = 27
+    buildTooLsSdkVersion = "27.0.2"
+    rxjava2Version = '2.1.10'
+    gsonVersion = '2.8.2'
+    rxandroidVersion ='2.0.1'
+    archComponetVersion = '1.0.0'
+    glideVersion = '4.6.1'
+    androidBindingCompiler ='3.0.0'
+    minSdkVersion = 18
+    targetSdkVersion = 27
+
+    dependencies = [
+            supportAppcompat: "com.android.support:appcompat-v7:$buildTooLsSdkVersion",
+            supportV4: "com.android.support:support-v4:$buildTooLsSdkVersion",
+            design: "com.android.support:design:$buildTooLsSdkVersion",
+            rxjava2: "io.reactivex.rxjava2:rxjava:$rxjava2Version",
+            rxandroid: "io.reactivex.rxjava2:rxandroid:$rxandroidVersion",
+            gson: "com.google.code.gson:gson:$gsonVersion",
+            androidBindingCompiler: "com.android.databinding:compiler:$androidBindingCompiler",
+            glide: "com.github.bumptech.glide:glide:$glideVersion",
+            archComponetsExtention: "android.arch.lifecycle:extensions:$archComponetVersion",
+            archComponetsCompiler: "android.arch.lifecycle:compiler:$archComponetVersion"
+           // compile 'com.github.bumptech.glide:glide:4.6.1'
+    ]
+
 }
 
 allprojects {

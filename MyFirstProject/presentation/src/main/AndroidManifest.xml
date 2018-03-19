@@ -1,0 +1,63 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mits16.presentation">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+
+        <activity android:name="com.example.mits16.presentation.MenuActivity">
+<intent-filter>
+    <action android:name="android.intent.action.MAIN"/>
+    <category android:name="android.intent.category.LAUNCHER"/>
+</intent-filter>
+        </activity>
+
+
+   <receiver android:name="com.example.mits16.presentation.homework5.MyReceiver" android:enabled="true" android:exported="false">
+            <intent-filter>
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+               <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.example.mits16.presentation.homework5.MyService"/>
+
+        <activity android:name="com.example.mits16.presentation.HomeWork1Activity"
+            android:parentActivityName="com.example.mits16.presentation.MenuActivity"/>
+        <activity android:name="com.example.mits16.presentation.HomeWork2Activity"
+            android:parentActivityName="com.example.mits16.presentation.MenuActivity"/>
+        <activity android:name="com.example.mits16.presentation.HomeWork3Activity"
+    android:parentActivityName="com.example.mits16.presentation.MenuActivity"/>
+        <activity android:name="com.example.mits16.presentation.homework4.HomeWork4Activity"
+            android:parentActivityName="com.example.mits16.presentation.MenuActivity"/>
+        <activity android:name="com.example.mits16.presentation.homework4.ClockActivity"
+            android:parentActivityName="com.example.mits16.presentation.homework4.HomeWork4Activity"/>
+        <activity android:name="com.example.mits16.presentation.homework5.HomeWork5Activity"
+            android:parentActivityName="com.example.mits16.presentation.MenuActivity"/>
+        <activity android:name="com.example.mits16.presentation.homework6.HomeWork6Activity"
+            android:parentActivityName="com.example.mits16.presentation.MenuActivity"/>
+        <activity android:name="com.example.mits16.presentation.homework7.HomeWork7Activity"
+            android:parentActivityName="com.example.mits16.presentation.MenuActivity"/>
+        <activity android:name="com.example.mits16.presentation.homework8.HomeWork8Activity"
+            android:parentActivityName="com.example.mits16.presentation.MenuActivity"/>
+        <activity android:name="com.example.mits16.presentation.homework9.HomeWork9Activity"
+        android:parentActivityName="com.example.mits16.presentation.MenuActivity"/>
+
+
+        <activity android:name=".screens.user.UserActivity"
+            android:parentActivityName="com.example.mits16.presentation.MenuActivity"/>
+
+
+    </application>
+</manifest>
