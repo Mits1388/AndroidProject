@@ -1,15 +1,28 @@
 package com.example.mits16.presentation.base;
 
 import android.arch.lifecycle.ViewModel;
+import android.util.Log;
+
+
 import io.reactivex.disposables.CompositeDisposable;
 
 /**
- * Created by mizz8 on 18.03.2018.
+ * Created by user on 12.03.2018.
  */
 
-public class BaseViewModel extends ViewModel {
+public abstract class BaseViewModel extends ViewModel{
 
     protected CompositeDisposable compositeDisposable = new CompositeDisposable();
+
+
+
+    public BaseViewModel() {
+        super();
+        Log.e("BaseViewModel", "success");
+      createInject();
+    }
+   public  abstract void createInject();
+
 
 
     public void onStart(){
@@ -29,11 +42,9 @@ public class BaseViewModel extends ViewModel {
     @Override
     protected void onCleared() {
         super.onCleared();
-        //от писываемся
         if(!compositeDisposable.isDisposed()) {
             compositeDisposable.dispose();
         }
 
     }
 }
-

@@ -1,48 +1,52 @@
 package com.example.mits16.domain.entity;
 
-
-
 /**
- * Created by mizz8 on 18.03.2018.
+ * Created by user on 12.03.2018.
  */
 
 public class UserEntity {
 
-    private String username;
-    private int age;
-    private String profileUrl;
-    private String surname;
-    private String gender;
+    private String oid;
+    private String user;
+    private String ages;
+    private String last;
 
-
-    public UserEntity() {
+    public UserEntity(String user, String last, String ages, String oid) {
+        this.user = user;
+        this.ages = ages;
+        this.last = last;
+        this.oid = oid;
     }
 
-    public UserEntity(String username,String surname,int age,String gender,String profileUrl) {
-        this.username = username;
-        this.age = age;
-        this.profileUrl = profileUrl;
-        this.gender = gender;
-        this.surname = surname;
+    public String getOid() {
+        return oid;
     }
 
-    public String getUsername() {
-        return username;
+    public void setOid(String oid) {
+        this.oid = oid;
     }
 
-    public int getAge() {
-        return age;
+    public String getUser() {
+        return user;
     }
 
-    public String getProfileUrl() {
-        return profileUrl;
+    public void setUser(String user) {
+        this.user = user;
     }
 
-    public String getSurname() {
-        return surname;
+    public String getAges() {
+        return ages;
     }
 
-    public String getGender() {
-        return gender;
+    public void setAges(String ages) {
+        this.ages = ages;
+    }
+
+    public String getLast() {
+        return last;
+    }
+
+    public void setLast(String last) {
+        this.last = last;
     }
 }

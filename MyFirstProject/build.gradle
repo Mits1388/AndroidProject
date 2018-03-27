@@ -24,6 +24,9 @@ ext{
     archComponetVersion = '1.0.0'
     glideVersion = '4.6.1'
     androidBindingCompiler ='3.0.0'
+    daggerVersion  = '2.15'
+    javaInjectVersion = '1'
+    retrofitVersion = '2.4.0'
     minSdkVersion = 18
     targetSdkVersion = 27
 
@@ -37,8 +40,15 @@ ext{
             androidBindingCompiler: "com.android.databinding:compiler:$androidBindingCompiler",
             glide: "com.github.bumptech.glide:glide:$glideVersion",
             archComponetsExtention: "android.arch.lifecycle:extensions:$archComponetVersion",
-            archComponetsCompiler: "android.arch.lifecycle:compiler:$archComponetVersion"
-           // compile 'com.github.bumptech.glide:glide:4.6.1'
+            archComponetsCompiler: "android.arch.lifecycle:compiler:$archComponetVersion",
+            dagger: "com.google.dagger:dagger:$daggerVersion",
+            daggerCompiler: "com.google.dagger:dagger-compiler:$daggerVersion",
+            javaInject: "javax.inject:javax.inject:$javaInjectVersion",
+
+            retrofit: "com.squareup.retrofit2:retrofit:$retrofitVersion",
+            retrofitConverter:"com.squareup.retrofit2:converter-gson:$retrofitVersion",
+            retrofitRx:"com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
+
     ]
 
 }
